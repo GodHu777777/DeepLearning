@@ -14,7 +14,7 @@
 
 _most widely used machine learning tool_
 
-![Alt text](image.png)
+<img src="image.png" alt="image" width="300"/>
 
 ### Definition
 
@@ -24,11 +24,12 @@ The supervised learning problem is given a dataset with inputs $X$ and labels $Y
 Example above is also a __regression problem__ which refers to that the value $Y$ you're trying to predict is __continuous__.
 
 
-![Alt text](image-1.png)
+<img src="image-1.png" alt="image-1" width="300"/>
 
 While this tumor case is a __classification problem__ which refers to that $Y$ here takes on a __discrete__ number(only $1$ and $0$) of variables,even if there are $K$ discrete outputs,(like in this case if there are $K = 5$ types of cancer) it'll still be a __classification problem__,since output is __discrete__ anyway.
 
-![Alt text](image-3.png)
+<img src="image-3.png" alt="image-3" width="300"/>
+
 
 In most of times inputs can be __multi-dimensional__,we can fit a line that separate out the positive and negative examples(__logistic algorithm__).While there's an algorithm called the __support vector machine__ that allows you to use an __$\infty$-dimensional__ vector,to represent a data case.
 
