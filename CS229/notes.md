@@ -31,7 +31,7 @@ While this tumor case is a __classification problem__ which refers to that $Y$ h
 <img src="image-3.png" alt="image-3" width="300"/>
 
 
-In most of times inputs can be __multi-dimensional__,we can fit a line that separate out the positive and negative examples(__logistic algorithm__).While there's an algorithm called the __support vector machine__ that allows you to use an __$\infty$-dimensional__ vector,to represent a data case.
+In most of times inputs can be __multi-dimensional__,we can fit a line that separate out the positive and negative examples(using __logistic algorithm__).While there's an algorithm called the __support vector machine__ that allows you to use an __$\infty$-dimensional__ vector,to represent a data case.
 
 ## Machine Learning Strategy
 
@@ -49,7 +49,7 @@ $e.g.1$ __Clustering Algorithm__
 
 $e.g.2$ __Independent Components Analysis__ - to solve cocktail party problem
 
-##Reinforcement Learning
+## Reinforcement Learning
 
 Actually there is no standard about what is best or not,so we let the subject(like a robot or pet dog anyway) to do anything and then we human choose to give reward or not.
 
