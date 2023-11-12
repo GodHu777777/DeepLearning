@@ -10,7 +10,7 @@
 2. homework
 3. machine learning is defined as _giving computers the ability to learn wihout being explicitly programmed_
 
-##Supervised Learning
+## Supervised Learning
 
 _most widely used machine learning tool_
 
@@ -53,3 +53,97 @@ $e.g.2$ __Independent Components Analysis__ - to solve cocktail party problem
 
 Actually there is no standard about what is best or not,so we let the subject(like a robot or pet dog anyway) to do anything and then we human choose to give reward or not.
 
+
+# Lecture 2
+
+## Supervised Learning
+
+process:dataset $\rightarrow$learning algorithm$\rightarrow$hypothesis function
+
+__$h(x) = \theta_0 + \theta_1x$__
+
+with more input $x$,we can get hypothesis function like $h(x) = \theta_0 + \theta_1x_1 + \theta_2x_2$(in this case $x_1$ is size and $x_2$ is number of rooms)
+
+We can also have __$h(x) = \sum\limits_{j=0}^{2}\theta_jx_j$__,where $x_0 = 1$,$\theta = 
+ \left[
+ \begin{matrix}
+   \theta_0 \\
+   \theta_1 \\
+   \theta_2
+  \end{matrix}
+  \right]$,$x = 
+ \left[
+    \begin{matrix}
+    x_0 \\
+    x_1 \\
+    x_2
+   \end{matrix}
+ \right]$
+
+$\theta$: parameters
+
+$m$: number of training examples
+
+$x$: inputs/features
+
+$y$: output\target variable
+
+$(x,y)$: training example
+
+$(x^{(i)},y^{(i)})$: $i^{th}$ training example
+
+$n$: number of features(in this case $n = 2$)
+
+## Linear Regression Algorithm
+We want to minimize ${(h_{\theta}(x) - y)}^2$,let $J(\theta)=\frac 12\sum\limits_{i=1}^m{(h_{\theta}(x^{(i)}) - y^{(i)})}^2$ and find the best $\theta$ using __Gradient Descent__
+
+First,we start with $\theta = \vec{0}$,keep changing $\theta$ to reduce $J(\theta)$
+<img src="image-4.png" alt="image-4" width="300"/>
+
+$\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta)$ (_column equal means assignment_ and $\alpha$ means __learning rate__),by calculus,
+
+$\theta_j := \theta_j - \alpha\sum\limits_{i=1}^m(h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}$
+
+## Gradient Decent Algorithm
+KEY:_repeat until convergence_ 
+
+It may be used in generalized linear models,neural networks and a few other algorithms.
+
+<img src="image-5.png" alt="image-5" width="300"/>
+
+_no local optimal_
+
+### Batch Gradient Algorithm
+
+Its disadavantage occurs in case of big dataset
+
+### Stochastic Gradient Descent
+
+    Repeat{
+        For i=1 to m{
+$\theta_j :=\theta_j - \alpha (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)}$
+
+        }
+    }
+ 
+ ## Normal Equation
+
+only can be used in __Linear Regression__
+
+$\nabla_\theta J(\theta)(\theta \isin \reals^{n+1}) =
+\left[
+    \begin{matrix}
+    \frac{\partial J}{\partial\theta_0} \\
+    \frac{\partial J}{\partial\theta_1} \\
+    \frac{\partial J}{\partial\theta_2}
+   \end{matrix}
+ \right]$
+
+ $e.g$
+ $A \isin \reals^{2*2}, A = 
+ \left[
+    \begin{matrix}
+    A_{11} A_{12} \\
+    A_{21} A_{22}
+    \end{matrix}
+\right ],f:\reals^{2*2}\rightarrow\reals$
